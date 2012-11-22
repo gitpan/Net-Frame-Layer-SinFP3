@@ -1,5 +1,5 @@
 #
-# $Id: Tlv.pm 4 2012-11-18 15:03:39Z gomor $
+# $Id: Tlv.pm 9 2012-11-22 19:13:54Z gomor $
 #
 package Net::Frame::Layer::SinFP3::Tlv;
 use strict;
@@ -86,8 +86,7 @@ sub print {
    );
 
    my $type = $self->type;
-   if ($type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_IPVERSION
-   ||  $type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_SYSTEMCLASS
+   if ($type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_SYSTEMCLASS
    ||  $type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_VENDOR
    ||  $type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_OS
    ||  $type == &Net::Frame::Layer::SinFP3::NF_SINFP3_TLV_TYPE_OSVERSION
@@ -122,6 +121,9 @@ Net::Frame::Layer::SinFP3::Tlv - SinFP3 Tlv object
    use Net::Frame::Layer::SinFP3::Tlv;
 
    my $layer = Net::Frame::Layer::SinFP3::Tlv->new(
+      type   => 0,
+      length => 0,
+      value  => '',
    );
    $layer->pack;
 

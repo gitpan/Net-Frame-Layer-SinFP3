@@ -1,11 +1,11 @@
 #
-# $Id: SinFP3.pm 4 2012-11-18 15:03:39Z gomor $
+# $Id: SinFP3.pm 9 2012-11-22 19:13:54Z gomor $
 #
 package Net::Frame::Layer::SinFP3;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use base qw(Net::Frame::Layer Exporter);
 
